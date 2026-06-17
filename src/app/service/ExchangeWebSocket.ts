@@ -298,7 +298,8 @@ export class ExchangeWebSocket {
       if (!this.ws || this.ws.readyState !== WebSocket.OPEN) return;
       this.lastPingTs = Date.now();
       this.ws.send(JSON.stringify({ type: 'ping', ts: this.lastPingTs }));
-
+      
+      
       this.heartbeatTimeoutTimer = setTimeout(() => {
         console.warn('[ExchangeWS] 心跳超时，强制重连');
         this.ws?.close(4000, 'heartbeat timeout');

@@ -5,6 +5,7 @@
 snapshot + ws
 
 #### 存放
+
 zustandjs 用户存储数据
 - marketStore：行情数据、深度、K线，订阅/取消，与 WebSocket 强绑定。
   - k线
@@ -18,7 +19,6 @@ zustandjs 用户存储数据
 
 快照数据返回后放置对应的 store，同时将 dataflag = true， 表示可以接收推送数据
 推送数据传到对应的 store 做增删改、数据变化之后 update 到订阅的地方。
-
 公共的 hook 或者 数据拦截器，将数据处理好在对应到业务层。
 
 

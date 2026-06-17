@@ -16,6 +16,7 @@
 [orderbook.ts](./orderbook.ts)
 
 ```ts
+
 interface OrderBook {
     bids:  Arrary<OrderLevel>,  // 买单：价格从高到低
     asks:  Arrary<OrderLevel>,  // 卖单：价格从低到高
@@ -24,7 +25,7 @@ interface OrderBook {
 
 interface OrderLevel {
     price: Number,      // 价格（生产环境建议用整数表示）
-    volume: Number,     // 累计委托量
+    volume: Number,     // 委托量
 }
 ```
 

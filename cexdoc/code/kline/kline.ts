@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useMemo } from 'react';
-import type { ISymbolTypeComponentProps } from './../component-module-props';
+import type { ISymbolTypeComponentProps } from '../component-module-props';
 import type { IKlineConfig } from './kline-config';
 import TradingView from './trading-view';
 import useTheme from '@/hooks/useTheme';
 import useRedGreenDirection from '@/hooks/useColorMode';
 import { useTimeZoneStore } from '@/stores/trade/time-zone-store';
 import { isDev } from '@/utils/env';
-import KlineHeader from './../../components/kline-volume-period';
+import KlineHeader from '../../components/kline-volume-period';
 import { DEFAULT_PERIOD, formatSymbolForTradingView } from './utils';
 import useLanguage from '@/hooks/useLanguage';
 
